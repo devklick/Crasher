@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-    A simple crash game built using [SpacetimeDB](https://spacetimedb.com/).
+    A simple crash game built using <a href='https://spacetimedb.com/'>SpacetimeDB</a>.
 </p>
 
 
