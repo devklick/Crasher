@@ -80,6 +80,78 @@ Here, you should see that the game:
 - Schedules the next game
 - Repeats infinitely 
 
+<details>
+<summary>Example logs</summary>
+
+```
+Next round round created, 4097, starts at 2026-03-02T21:59:16.954573+00:00
+Game Tick - Round 4097, countdown seconds remaining 9
+Game Tick - Round 4097, countdown seconds remaining 8
+Game Tick - Round 4097, countdown seconds remaining 7
+Game Tick - Round 4097, countdown seconds remaining 6
+Game Tick - Round 4097, countdown seconds remaining 5
+Game Tick - Round 4097, countdown seconds remaining 4
+Game Tick - Round 4097, countdown seconds remaining 3
+Game Tick - Round 4097, countdown seconds remaining 2
+Game Tick - Round 4097, countdown seconds remaining 1
+Game Tick - Round 4097, countdown seconds remaining 0
+Game Tick - Round 4097, started
+Game Tick - Round 4097, multiplier increased to 1
+Game Tick - Round 4097, multiplier increased to 1
+Game Tick - Round 4097, multiplier increased to 1.01
+Game Tick - Round 4097, multiplier increased to 1.02
+Game Tick - Round 4097, multiplier increased to 1.03
+Game Tick - Round 4097, multiplier increased to 1.04
+Game Tick - Round 4097, multiplier increased to 1.06
+Game Tick - Round 4097, multiplier increased to 1.08
+Game Tick - Round 4097, multiplier increased to 1.1
+Game Tick - Round 4097, multiplier increased to 1.13
+Game Tick - Round 4097, multiplier increased to 1.15
+Game Tick - Round 4097, multiplier increased to 1.19
+Game Tick - Round 4097, multiplier increased to 1.22
+Game Tick - Round 4097, multiplier increased to 1.26
+Game Tick - Round 4097, multiplier increased to 1.31
+Game Tick - Round 4097, multiplier increased to 1.35
+Game Tick - Round 4097, multiplier increased to 1.4
+Game Tick - Round 4097, multiplier increased to 1.46
+Game Tick - Round 4097, multiplier increased to 1.52
+Game Tick - Round 4097, multiplier increased to 1.58
+Game Tick - Round 4097, multiplier increased to 1.64
+Game Tick - Round 4097, multiplier increased to 1.71
+Game Tick - Round 4097, multiplier increased to 1.79
+Game Tick - Round 4097, multiplier increased to 1.86
+Game Tick - Round 4097, multiplier increased to 1.94
+Game Tick - Round 4097, multiplier increased to 2.03
+Game Tick - Round 4097, multiplier increased to 2.12
+Game Tick - Round 4097, multiplier increased to 2.21
+Game Tick - Round 4097, multiplier increased to 2.31
+Game Tick - Round 4097, multiplier increased to 2.41
+Game Tick - Round 4097, multiplier increased to 2.52
+Game Tick - Round 4097, multiplier increased to 2.63
+Game Tick - Round 4097, multiplier increased to 2.74
+Game Tick - Round 4097, multiplier increased to 2.86
+Game Tick - Round 4097, multiplier increased to 2.98
+Game Tick - Round 4097, multiplier increased to 3.11
+Game Tick - Round 4097, multiplier increased to 3.24
+Game Tick - Round 4097, multiplier increased to 3.37
+Game Tick - Round 4097, multiplier increased to 3.51
+Game Tick - Round 4097, multiplier increased to 3.66
+Game Tick - Round 4097, multiplier increased to 3.81
+Game Tick - Round 4097, multiplier increased to 3.96
+Game Tick - Round 4097, multiplier increased to 4.12
+Game Tick - Round 4097, multiplier increased to 4.28
+Game Tick - Round 4097, multiplier increased to 4.45
+Game Tick - Round 4097, multiplier increased to 4.62
+Game Tick - Round 4097, multiplier increased to 4.79
+Game Tick - Round 4097, multiplier increased to 4.97
+Game Tick - Round 4097, multiplier increased to 5.16
+Game Tick - Round 4097, multiplier increased to 5.34
+Game Tick - Round 4097, multiplier increased to 5.54
+Game Tick - Round 4097, multiplier increased to 5.61
+Game Tick - Round 4097 ended, multiplier crashed at 5.61
+```
+</details>
+
 ### Run the UI
 
 A very basic UI has been created which simply connects to the backend and displays
