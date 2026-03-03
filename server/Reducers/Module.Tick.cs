@@ -33,7 +33,7 @@ public static partial class Module
 
     private static void ProcessCountdownTick(ReducerContext ctx, ActiveRound round)
     {
-        var secondsRemaining = Time.DiffSecondsWhole(round.TargetStartTime, ctx.Timestamp);
+        var secondsRemaining = (int)Math.Ceiling(Time.DiffSeconds(round.TargetStartTime, ctx.Timestamp));
 
         if (round.CountdownSecondsRemaining != secondsRemaining)
         {
@@ -83,7 +83,7 @@ public static partial class Module
         var gameDefinition = ctx.Db.GameDefinition.Id.Find(round.GameDefinitionId)
             ?? throw new KeyNotFoundException($"No GameDefinition found with Id {round.GameDefinitionId}");
 
-        var elapsed = Time.DiffSecondsWhole(ctx.Timestamp, round.CrashTime.Value);
+        var elapsed = (int)Math.Floor(Time.DiffSeconds(ctx.Timestamp, round.CrashTime.Value));
 
         if (elapsed < gameDefinition.CooldownSeconds)
         {
