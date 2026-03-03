@@ -50,11 +50,15 @@ const tablesSchema = __schema({
   ActiveRound: __table({
     name: 'active_round',
     indexes: [
+      { name: 'GameDefinitionId', algorithm: 'btree', columns: [
+        'gameDefinitionId',
+      ] },
       { name: 'Id', algorithm: 'btree', columns: [
         'id',
       ] },
     ],
     constraints: [
+      { name: 'active_round_game_definition_id_key', constraint: 'unique', columns: ['gameDefinitionId'] },
       { name: 'active_round_id_key', constraint: 'unique', columns: ['id'] },
     ],
   }, ActiveRoundRow),
@@ -86,9 +90,13 @@ const tablesSchema = __schema({
       { name: 'Id', algorithm: 'btree', columns: [
         'id',
       ] },
+      { name: 'Name', algorithm: 'btree', columns: [
+        'name',
+      ] },
     ],
     constraints: [
       { name: 'game_definition_id_key', constraint: 'unique', columns: ['id'] },
+      { name: 'game_definition_name_key', constraint: 'unique', columns: ['name'] },
     ],
   }, GameDefinitionRow),
 });

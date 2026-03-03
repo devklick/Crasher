@@ -44,13 +44,8 @@ Now, in another console, we can publish the server (which contains the database,
 to the local development server. 
 
 ```
-spacetime publish --server local --module-path server/spacetimedb crasher
+spacetime publish --server local
 ```
-> [!NOTE]  
-> We specify `--module-path server/spacetimedb` here to tell the spacetime CLI
-> where the project which contains the backend can be found.
->
-> We specify `crasher` here, which is the name of the database.
 
 After a few seconds, this should run to completion and the backend will be successfully 
 published. 
@@ -64,11 +59,9 @@ Since the core game logic is automatically started when the backend is published
 we can check the server logs to see what's going on.
 
 ```
-spacetime logs --server local crasher --follow
+spacetime logs --server local --follow
 ```
-> [!NOTE]  
-> We specify `crasher` here, which is the name of the database.
->
+> [!NOTE] 
 > We specify the `--follow` argument to keep the terminal connected so we see 
 > realtime logs.
 
@@ -164,6 +157,23 @@ Once the UI is running, you can browse to the URL that it's hosted on
 >http://localhost:5173/
 
 Here, you can see basically the same information that was shown in the logs.
+
+
+### Generate TS types from C# classes/structs
+
+If you change any of the tables, enums etc in the [server](./server/), you'll need to 
+re-generate the types that are used by the [UI](./ui/) project. This can be done 
+by executing the following command:
+
+```
+spacetime generate --lang typescript --out-dir ui/src/module_bindings --module-path server
+```
+> [!NOTE] 
+> We should be able to drop the `--module-path server` part here, since this 
+> information lives in [spacetime.json](./spacetime.json), however there's
+> currently a [bug](github.com/clockworklabs/SpacetimeDB/issues/4475) preventing
+> the module path being read correctly by the generate command.
+> realtime logs.
 
 ## To do
 
