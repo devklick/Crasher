@@ -12,7 +12,7 @@ public static partial class Module
     {
         if (ctx.Db.TickSchedule.Count == 0)
         {
-            foreach (var gameDefinition in BuildGameDefinitions())
+            foreach (var gameDefinition in GameDefinition.Items)
             {
                 ctx.Db.GameDefinition.Insert(gameDefinition);
 

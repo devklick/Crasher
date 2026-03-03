@@ -57,17 +57,17 @@ public static partial class Module
         /// before the round gets completed and a new round scheduled.
         /// </summary>
         public int CooldownSeconds;
-    }
 
-    public static List<GameDefinition> BuildGameDefinitions() => [
-        new GameDefinition
-        {
-            Name = "Standard",
-            Margin = 0.02,
-            CountdownSeconds = 10,
-            TickMilliseconds = 100,
-            MaxMultiplier = 1000,
-            CooldownSeconds = 3
-        }
-    ];
+        public static readonly List<GameDefinition> Items = [
+            new GameDefinition
+                {
+                    Name = "Standard",
+                    Margin = 0.02,
+                    CountdownSeconds = 10,
+                    TickMilliseconds = 100,
+                    MaxMultiplier = 1000,
+                    CooldownSeconds = 3
+                }
+        ];
+    }
 }
